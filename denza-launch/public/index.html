@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DENZA × JAZZABLANCA — Technology Drives Elegance</title>
+<meta name="description" content="Découvrez DENZA avant son lancement officiel au Maroc. Une sélection limitée d'invités aura l'opportunité de rejoindre la soirée privée de lancement." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --blue: #1f4ed8;
+    --blue-dark: #1740b0;
+    --navy: #1c2540;
+    --ink: #2b3148;
+    --muted: #8a90a2;
+    --line: #e3e6ee;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background-color: #f6f7fa;
+    background-image: url('/assets/bg.jpeg');
+    background-repeat: repeat;
+    background-size: 415px auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--line);
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .brand img { height: 26px; display: block; }
+  header .partner img { height: 34px; display: block; }
+
+  /* ---------- Car lineup band ---------- */
+  .lineup {
+    background: linear-gradient(180deg, #eef1f6 0%, #e6eaf1 55%, #dfe4ec 100%);
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+  }
+  .lineup img { width: 100%; max-width: 1100px; display: block; margin: 0 auto; }
+
+  /* ---------- Main ---------- */
+  main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 70px 40px 40px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .eyebrow {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  h1 {
+    color: var(--navy);
+    font-weight: 300;
+    font-size: clamp(34px, 4.2vw, 56px);
+    line-height: 1.06;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  h1 .l2 { white-space: nowrap; }
+  .rule {
+    width: 60px;
+    height: 3px;
+    background: var(--blue);
+    margin: 28px 0 26px;
+  }
+  .subhead {
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .lede {
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 440px;
+    margin-bottom: 36px;
+  }
+  .lede strong { font-weight: 700; }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 40px;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    background: transparent;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px 26px;
+    border-radius: 30px;
+    transition: all .2s ease;
+  }
+  .btn-outline:hover { background: var(--blue); color: #fff; }
+
+  /* ---------- Form card ---------- */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 40px 38px;
+    box-shadow: 0 24px 60px -28px rgba(28, 37, 64, 0.35);
+  }
+  .card h2 {
+    font-weight: 300;
+    font-size: 34px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .card h2 .req { color: var(--navy); display: block; }
+  .card h2 .pa { color: var(--blue); display: block; }
+  .card .rule { margin: 16px 0 28px; }
+
+  .field { margin-bottom: 18px; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  label {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 7px;
+    letter-spacing: .3px;
+  }
+  input, select {
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px solid var(--line);
+    background: transparent;
+    padding: 8px 2px;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--ink);
+    outline: none;
+    transition: border-color .2s ease;
+  }
+  input:focus, select:focus { border-bottom-color: var(--blue); }
+  select { color: var(--muted); }
+
+  .consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 24px 0 26px;
+  }
+  .consent input { width: 16px; height: 16px; margin-top: 2px; flex: none; }
+  .consent label { font-size: 12px; color: var(--muted); line-height: 1.5; margin: 0; }
+
+  .btn-submit {
+    width: 100%;
+    border: none;
+    background: var(--blue);
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: background .2s ease;
+  }
+  .btn-submit:hover { background: var(--blue-dark); }
+  .btn-submit:disabled { opacity: .6; cursor: default; }
+
+  .form-msg { font-size: 13px; margin-top: 16px; text-align: center; }
+  .form-msg.ok { color: #1a8a4a; }
+  .form-msg.err { color: #c0392b; }
+
+  /* ---------- Scroll ---------- */
+  .scroll {
+    text-align: center;
+    padding: 10px 0 46px;
+    color: var(--muted);
+  }
+  .scroll span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+  }
+  .scroll .chev {
+    width: 36px; height: 36px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    background: rgba(255,255,255,0.6);
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    main { grid-template-columns: 1fr; gap: 44px; padding: 44px 22px 24px; }
+    h1 { font-size: 44px; }
+    header { padding: 14px 20px; }
+    header .partner img { height: 26px; }
+  }
+  @media (max-width: 480px) {
+    h1 { font-size: 34px; }
+    .card { padding: 28px 22px; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="brand"><img src="/assets/denza-logo.png" alt="DENZA" /></div>
+    <div class="partner"><img src="/assets/jazz-logo.png" alt="En partenariat avec Jazzablanca — 17e édition" /></div>
+  </header>
+
+  <section class="lineup">
+    <img src="/assets/cars.png" alt="DENZA lineup — D9, N7, Z9 GT, B5" />
+  </section>
+
+  <main>
+    <div class="hero">
+      <div class="eyebrow">DENZA × JAZZABLANCA</div>
+      <h1>Technology<br /><span class="l2">Drives Elegance</span></h1>
+      <div class="rule"></div>
+      <div class="subhead">Exclusive Preview at Jazzablanca</div>
+      <p class="lede">
+        Découvrez <strong>DENZA</strong> avant son lancement officiel au Maroc.
+        Une sélection limitée d'invités aura l'opportunité de rejoindre la
+        soirée <strong>privée</strong> de lancement.
+      </p>
+      <a class="btn-outline" href="#request">En savoir plus →</a>
+    </div>
+
+    <div class="card" id="request">
+      <h2><span class="req">Request</span><span class="pa">Private Access</span></h2>
+      <div class="rule"></div>
+      <form id="lead-form">
+        <div class="row2">
+          <div class="field">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required />
+          </div>
+          <div class="field">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="field">
+          <label for="telephone">Téléphone</label>
+          <input type="tel" id="telephone" name="telephone" required />
+        </div>
+        <div class="field">
+          <label for="ville">Ville</label>
+          <select id="ville" name="ville" required>
+            <option value="" selected disabled>Sélectionnez votre ville</option>
+            <option>Casablanca</option>
+            <option>Rabat</option>
+            <option>Marrakech</option>
+            <option>Tanger</option>
+            <option>Fès</option>
+            <option>Agadir</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="consent">
+          <input type="checkbox" id="consent" name="consent" required />
+          <label for="consent">J'accepte d'être contacté par DENZA Maroc concernant cette expérience exclusive.</label>
+        </div>
+        <button class="btn-submit" type="submit">Submit My Request →</button>
+        <div class="form-msg" id="form-msg" role="status"></div>
+      </form>
+    </div>
+  </main>
+
+  <div class="scroll">
+    <div class="chev" aria-hidden="true">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <span>SCROLL</span>
+  </div>
+
+  <script>
+    const form = document.getElementById('lead-form');
+    const msg = document.getElementById('form-msg');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.btn-submit');
+      msg.className = 'form-msg';
+      msg.textContent = '';
+      const data = Object.fromEntries(new FormData(form).entries());
+      btn.disabled = true;
+      try {
+        const res = await fetch('/api/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        if (!res.ok) throw new Error('bad status');
+        form.reset();
+        msg.className = 'form-msg ok';
+        msg.textContent = 'Merci ! Votre demande a bien été reçue. Nous vous contacterons prochainement.';
+      } catch (err) {
+        msg.className = 'form-msg err';
+        msg.textContent = "Une erreur est survenue. Veuillez réessayer.";
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

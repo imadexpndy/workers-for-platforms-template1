@@ -1,0 +1,28 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "denza-launch",
+	"main": "src/index.js",
+	"compatibility_date": "2025-10-08",
+	// Serve the landing page from ./public via Workers Static Assets.
+	"assets": {
+		"directory": "./public",
+		"binding": "ASSETS"
+	},
+	// Custom domain: denza.expndy.com (the expndy.com zone must be active in
+	// the target Cloudflare account; wrangler provisions the cert on deploy).
+	"routes": [
+		{
+			"pattern": "denza.expndy.com",
+			"custom_domain": true
+		}
+	],
+	"observability": {
+		"enabled": true
+	}
+	// Optional — persist form leads in KV. Create a namespace and uncomment:
+	//   npx wrangler kv namespace create LEADS
+	// then add the returned id here:
+	// "kv_namespaces": [
+	//   { "binding": "LEADS", "id": "<your-kv-namespace-id>" }
+	// ]
+}

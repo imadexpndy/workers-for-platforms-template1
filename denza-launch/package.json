@@ -1,0 +1,12 @@
+{
+	"name": "denza-launch",
+	"private": true,
+	"description": "DENZA x Jazzablanca launch landing page (Cloudflare Worker + Static Assets).",
+	"scripts": {
+		"dev": "wrangler dev --local",
+		"deploy": "wrangler deploy"
+	},
+	"devDependencies": {
+		"wrangler": "^4.0.0"
+	}
+}
